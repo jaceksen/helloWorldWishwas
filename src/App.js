@@ -12,10 +12,12 @@ import ParentCompnent from './components/ParentCompnent';
 import UserGreeting from './components/UserGreeting';
 import NameList from './components/NameList';
 import Stylsheet from './components/Stylesheet';
+import LifecycleA from './components/LifecycleA';
 
 function App() {
   return (
     <div className="App">
+      <LifecycleA />
       <Stylsheet />
       <NameList />
       <UserGreeting />

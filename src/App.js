@@ -13,10 +13,14 @@ import UserGreeting from './components/UserGreeting';
 import NameList from './components/NameList';
 import Stylsheet from './components/Stylesheet';
 import LifecycleA from './components/LifecycleA';
+import FragmentDemo from './components/FragmentDemo';
+import Table from './components/Table';
 
 function App() {
   return (
     <div className="App">
+      <Table />
+      <FragmentDemo />
       <LifecycleA />
       <Stylsheet />
       <NameList />

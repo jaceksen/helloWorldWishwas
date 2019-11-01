@@ -15,10 +15,12 @@ import Stylsheet from './components/Stylesheet';
 import LifecycleA from './components/LifecycleA';
 import FragmentDemo from './components/FragmentDemo';
 import Table from './components/Table';
+import PureComp from './components/PureComp';
 
 function App() {
   return (
     <div className="App">
+      <PureComp />
       <Table />
       <FragmentDemo />
       <LifecycleA />

@@ -1,7 +1,11 @@
 import React from 'react';
 import './App.css';
-import ClickCounter from './components/ClickCounter';
-import HoverCounter from './components/HoverCounter';
+import ClickCounterTwo from './components/ClickCounterTwo';
+import HoverCounterTwo from './components/HoverCounterTwo';
+// import User from './components/User';
+import CounterThree from './components/CounterThree';
+// import ClickCounter from './components/ClickCounter';
+// import HoverCounter from './components/HoverCounter';
 // import FocusInput from './components/FocusInput';
 // import FRParentInput from './components/FRParentInput';
 // import PortalDemo from './components/PortalDemo';
@@ -28,8 +32,19 @@ import HoverCounter from './components/HoverCounter';
 function App() {
   return (
     <div className="App">
-      <HoverCounter name='jacek44'/>
-      <ClickCounter name='Jacek33'/>
+      <CounterThree render = { (count, incrementCount) => (
+      <ClickCounterTwo count={count} incrementCount={incrementCount} />
+      )} 
+      />
+      <CounterThree render = { (count, incrementCount) => (
+      <HoverCounterTwo count={count} incrementCount={incrementCount} />
+      )} 
+      />
+      {/* <User render={ (isLoggedIn) => isLoggedIn ? 'Jacek' : 'Guest' }/> */}
+      {/* <ClickCounterTwo /> */}
+      {/* <HoverCounterTwo /> */}
+      {/* <HoverCounter name='jacek44'/> */}
+      {/* <ClickCounter name='Jacek33'/> */}
       {/* <ErrorBoundary>
         <Hero heroName="Batman" />
       </ErrorBoundary>

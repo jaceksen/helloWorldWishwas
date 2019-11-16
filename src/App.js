@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
-import ClickCounterTwo from './components/ClickCounterTwo';
-import HoverCounterTwo from './components/HoverCounterTwo';
+import ComponentC from './components/ComponentC';
+import { UserProvider } from './components/userContext';
+// import ClickCounterTwo from './components/ClickCounterTwo';
+// import HoverCounterTwo from './components/HoverCounterTwo';
 // import User from './components/User';
-import CounterThree from './components/CounterThree';
+// import CounterThree from './components/CounterThree';
 // import ClickCounter from './components/ClickCounter';
 // import HoverCounter from './components/HoverCounter';
 // import FocusInput from './components/FocusInput';
@@ -32,14 +34,17 @@ import CounterThree from './components/CounterThree';
 function App() {
   return (
     <div className="App">
-      <CounterThree render = { (count, incrementCount) => (
-      <ClickCounterTwo count={count} incrementCount={incrementCount} />
-      )} 
-      />
-      <CounterThree render = { (count, incrementCount) => (
-      <HoverCounterTwo count={count} incrementCount={incrementCount} />
-      )} 
-      />
+      <UserProvider value="Jacek">
+        <ComponentC />
+      </UserProvider>
+      {/* <CounterThree render = { (count, incrementCount) => ( */}
+      {/* <ClickCounterTwo count={count} incrementCount={incrementCount} /> */}
+      {/* )}  */}
+      {/* /> */}
+      {/* <CounterThree render = { (count, incrementCount) => ( */}
+      {/* <HoverCounterTwo count={count} incrementCount={incrementCount} /> */}
+      {/* )}  */}
+      {/* /> */}
       {/* <User render={ (isLoggedIn) => isLoggedIn ? 'Jacek' : 'Guest' }/> */}
       {/* <ClickCounterTwo /> */}
       {/* <HoverCounterTwo /> */}
